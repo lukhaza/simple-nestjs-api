@@ -14,8 +14,8 @@ export class RandomorgService {
 
     }
 
-    health(): number{
-        return 1;
+    health(): { status: number }{
+        return { status: 200 };
     }
 
     generateIntegers():  Observable<AxiosResponse<any>> {

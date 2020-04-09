@@ -14,9 +14,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('random')
-  getRandom(): number {
-    return this.randomService.getdummy();
+  @Get('health')
+  getRandom(): any {
+    return this.randomService.health();
   }
 
   @Get('getintegers')
