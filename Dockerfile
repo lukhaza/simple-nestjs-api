@@ -28,4 +28,4 @@ RUN chown -R lukhanyo-api ./
 USER lukhanyo-api
 
 # Start the application.
-CMD [ "npm", "run", "envsub:start" ]
+CMD [ "npm", "run", "start" ]
