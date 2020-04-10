@@ -22,6 +22,9 @@ EXPOSE 3000
 
 # Copy the api files.
 COPY . ./
+
+RUN npm install
+
 RUN chown -R lukhanyo-api ./
 
 # Switch user.
