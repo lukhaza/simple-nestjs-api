@@ -21,7 +21,7 @@ WORKDIR /home/lukhanyo-api/lukhanyo-api
 EXPOSE 3000
 
 # Copy the api files.
-COPY src/ ./
+COPY . ./
 RUN chown -R lukhanyo-api ./
 
 # Switch user.
