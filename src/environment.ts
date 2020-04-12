@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
-    host: 'localhost'
+    production: true,
+    host: 'lukhanyo.ml'
   };
   
