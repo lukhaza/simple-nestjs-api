@@ -1,10 +1,10 @@
 import { Controller, Get, UseGuards, Res, Req } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { environment } from '../../environment';
 
 @Controller('auth')
 export class OauthController {
     
-    HOST = "lukhanyo.ml"; // Change when running locally
     @Get('google')
     @UseGuards(AuthGuard('google'))
     googleLogin()
@@ -19,9 +19,9 @@ export class OauthController {
         // handles the Google OAuth2 callback
         const jwt: string = req.user.jwt;
         if (jwt)
-            res.redirect(`http://${this.HOST}:4200/login/succes/'${jwt}`);
+            res.redirect(`http://${environment.host}:4200/login/succes/'${jwt}`);
         else 
-            res.redirect(`http://${this.HOST}:4200/login/failure`);
+            res.redirect(`http://${environment.host}:4200/login/failure`);
     }
 
     @Get('protected')
