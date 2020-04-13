@@ -1,5 +1,7 @@
 export const environment = {
     production: true,
-    host: 'lukhanyo.ml'
+    hostUi: 'lukhanyo.ml',
+    hostApi: 'lukhanyo.ml/api/',
   };
-  
+//    localhost:4200 ----> lukhanyo.ml
+//    localhost:3000 ----> lukhanyo.ml/api/
