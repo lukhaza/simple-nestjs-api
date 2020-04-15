@@ -24,6 +24,9 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
+      env:
+        DOCKER_USERNAME: ${{secret.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secret.DOCKER_PASSWORD}}
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker build -t testimage .
