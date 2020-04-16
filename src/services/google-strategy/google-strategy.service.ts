@@ -12,7 +12,7 @@ export class GoogleStrategyService extends PassportStrategy(Strategy,'google') {
             clientSecret: 'y3rQDRXANJS9Pikhfa3sqfY8', // <- Replace this with your client secret
             callbackURL : `http://${environment.hostApi}/auth/google/callback`,
             passReqToCallback: true,
-            scope: ['profile']
+            // scope: ['profile']
         })
     }
     async validate(request: any, accessToken: string, refreshToken: string, profile, done: Function)
