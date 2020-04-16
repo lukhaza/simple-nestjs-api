@@ -35,4 +35,6 @@ jobs:
     - name: dush to dockerhub
       run: |
         docker push lukhanyokwela/nestjs-api:$GITHUB_RUN_NUMBER
+        docker tag lukhanyokwela/nestjs-api:$GITHUB_RUN_NUMBER lukhanyokwela/nestjs-api
+        docker push lukhanyokwela/nestjs-api
 
