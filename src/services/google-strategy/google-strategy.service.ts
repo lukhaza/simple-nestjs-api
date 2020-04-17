@@ -7,7 +7,7 @@ import { UsersService } from '../users/users.service';
 
 @Injectable()
 export class GoogleStrategyService extends PassportStrategy(Strategy,'google') {
-    constructor(private readonly authService:AuthService, private userservice: UsersService){
+    constructor(private readonly authService:AuthService){
         super({
             clientID    : '721784170333-9f2m47cb85jpa5s74hnpppsu0nvqelq7.apps.googleusercontent.com',     // <- Replace this with your client id
             clientSecret: 'y3rQDRXANJS9Pikhfa3sqfY8', // <- Replace this with your client secret

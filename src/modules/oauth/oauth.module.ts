@@ -4,9 +4,12 @@ import { GoogleStrategyService } from '../../services/google-strategy/google-str
 import { AuthService } from '../../services/auth/auth.service'
 import { JwtStrategyService } from 'src/services/jwt-strategy/jwt-strategy.service';
 import { UsersService } from 'src/services/users/users.service';
+import { UsersModule } from '../users/users.module';
+import { User } from '../../services/users/user.model'
 
 @Module({
+    imports: [UsersModule],
     controllers: [OauthController],
-    providers: [UsersService, GoogleStrategyService, AuthService, JwtStrategyService]
+    providers: [GoogleStrategyService, AuthService, JwtStrategyService, UsersService]
 })
 export class OauthModule { }
