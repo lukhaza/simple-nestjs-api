@@ -23,18 +23,10 @@ export class UsersService {
         return profile.id as string;
     }
 
-    
-
-    async findOneByThirdPartyId(userid: string) {
-        const founduser = await this.users.find((dbuser) => dbuser.id.toString() === userid);
-        return founduser;
-    }
-
-
     async findUser(userid: string): Promise<User[]> {
         let user;
         try {
-          user = await this.userModel.find({ id: userid }).exec() //findById(id).exec();
+          user = await this.userModel.find({ id: userid }).exec(); //findById(id).exec();
         } catch (error) {
             return null;
         //   throw new NotFoundException('Could not find product.');

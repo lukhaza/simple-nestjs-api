@@ -19,7 +19,7 @@ export class OauthController {
         if (jwt) {
             res.setHeader('Cache-Control', 'private');
             res.cookie('jwt', jwt);
-            res.status(200)
+            res.status(200);
             res.redirect(`http://${environment.hostUi}/login/succes/${jwt}`);
         }
         else {

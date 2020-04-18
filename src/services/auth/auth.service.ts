@@ -29,8 +29,8 @@ export class AuthService {
             
 
             this.foundUser = await this.usersService.findUser(profile.id);
-            console.log('foundUser:')
-            console.log(this.foundUser)
+            console.log('foundUser:');
+            console.log(this.foundUser[0].id);
 
             if (this.foundUser.length > 0) {
                  console.log('user exists');
