@@ -4,4 +4,4 @@ export const environment = {
     hostApi: 'lukhanyo.ml/api',
   };
 //    localhost:4200 ----> lukhanyo.ml
-//    localhost:3000 ----> lukhanyo.ml/api/
+//    localhost:3000 ----> lukhanyo.ml/api
