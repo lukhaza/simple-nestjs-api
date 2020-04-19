@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  hostUi: 'twodev.ml',
-  hostApi: 'twodev.ml/api',
+  hostUi: 'lukhanyo.ml',
+  hostApi: 'lukhanyo.ml/api',
 };
 
 
